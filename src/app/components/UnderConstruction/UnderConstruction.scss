@@ -1,0 +1,31 @@
+@import '../../../styles/variables';
+
+.warningContainer {
+  background: $black-color;
+  height: 60px;
+  position: relative;
+}
+
+.warning {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 40px;
+  background-image: linear-gradient(135deg, $black-color 25%, transparent 25%, transparent 50%, $black-color 50%, $black-color 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+  background-color: $yellow-color;
+  text-align: center;
+
+  & > span {
+    display: inline-block;
+    color: $black-color;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    background: $yellow-color;
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+}

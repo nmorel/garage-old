@@ -12,6 +12,10 @@ function createGa(window, document, script, url, r, tag, firstScriptTag) {
 }
 
 function init(history) {
+  if (window.location.hostname === 'localhost') {
+    return;
+  }
+
   createGa(
     window,
     document,

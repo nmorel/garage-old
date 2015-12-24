@@ -6,9 +6,14 @@ $toggle-transition-delay: 500ms;
 
 .header {
   overflow: hidden;
-  background: #000;
+  background: $black-color;
   color: #fff;
   position: relative;
+}
+
+.navContainer {
+  position: relative;
+  min-height: 44px;
 }
 
 .nav {
@@ -30,7 +35,7 @@ $toggle-transition-delay: 500ms;
 
 .navLinks {
   padding: 0;
-  margin: 5px 0 0 0;
+  margin: 10px 0;
 
   > li {
     display: inline;
@@ -41,11 +46,4 @@ $toggle-transition-delay: 500ms;
       margin: 0 3px;
     }
   }
-}
-
-.title {
-  text-align: center;
-  margin: 26px 0;
-  /* To avoid the toggle button to be on top of title */
-  padding: $text-padding;
 }
