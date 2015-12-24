@@ -1,0 +1,57 @@
+{
+  "name": "garage",
+  "version": "1.0.0",
+  "description": "Partie front-office du site du garage",
+  "scripts": {
+    "webpack": "rm -rf dist && webpack",
+    "dev": "webpack-dev-server",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "local-build": "GH_TOKEN=nmorel gulp build",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.1.0",
+    "babel-core": "^6.3.17",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-jest": "^6.0.1",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "css-loader": "^0.23.0",
+    "del": "^2.2.0",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.0.0",
+    "eslint-plugin-react": "^3.11.3",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "file-loader": "^0.8.5",
+    "gulp": "^3.9.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-util": "^3.0.7",
+    "history": "1.13.1",
+    "html-loader": "^0.4.0",
+    "jest-cli": "^0.8.1",
+    "jscs": "^2.7.0",
+    "node-sass": "^3.4.2",
+    "react": "^0.14.3",
+    "react-addons-test-utils": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-router": "^1.0.2",
+    "react-tap-event-plugin": "^0.2.1",
+    "sass-loader": "^3.1.2",
+    "static-site-generator-webpack-plugin": "^1.3.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "jest": {
+    "testDirectoryName": "__test__",
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ]
+  }
+}

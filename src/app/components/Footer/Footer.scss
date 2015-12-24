@@ -1,0 +1,27 @@
+@import '../../../styles/variables';
+
+.footer {
+  margin-top: 20px;
+  padding: 6px;
+  text-align: center;
+  background: #ECECEC;
+  color: #AAA;
+  font-size: 12px;
+  clear: both;
+}
+
+.links {
+  display: block;
+
+  > a {
+    color: #888;
+  }
+
+  @media screen and (min-width: $xs-width) {
+    display: inline;
+
+    &::before {
+      content: ' — ';
+    }
+  }
+}
