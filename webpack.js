@@ -26,7 +26,7 @@ module.exports = config => {
           },
         },
         {
-          test: /\.(png|jpg|ico)$/,
+          test: /\.(png|jpg|ico|svg)$/,
           exclude: [/node_modules/],
           loader: 'file?name=' + imageFilename,
         },

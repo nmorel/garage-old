@@ -1,0 +1,30 @@
+@import '../../../../../styles/variables';
+
+$icon-width: 49px;
+$icon-height: 64px;
+
+.marker {
+  position: absolute;
+  width: $icon-width;
+  height: $icon-height;
+  left: -($icon-width / 2);
+  top: -$icon-height;
+  cursor: pointer;
+}
+
+.icon {
+  top: 0;
+  left: 0;
+  width: $icon-width;
+  height: $icon-height;
+  background-size: $icon-width $icon-height;
+  background: url('./Marker.svg') no-repeat;
+  transform: scale(0.65, 0.65);
+  will-change: transform;
+  transition: transform 0.25s cubic-bezier(0.485, 1.65, 0.545, 0.835);
+  transform-origin: ($icon-width / 2) $icon-height 0px;
+
+  &:hover {
+    transform: scale(1, 1);
+  }
+}

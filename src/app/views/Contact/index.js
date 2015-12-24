@@ -1,4 +1,4 @@
-import Contact from './components/Contact.jsx';
+import Contact from './components/Contact';
 
 export default {
   path: '/contact',
