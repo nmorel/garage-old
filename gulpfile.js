@@ -14,7 +14,7 @@ gulp.task('default', ['clean'], () => {
 
 gulp.task('clean', () => del(['./dist']));
 
-gulp.task('build', ['webpack'], () => {
+gulp.task('build', ['webpack', 'cname'], () => {
   return gulp.src('./dist/**/*')
     .pipe(ghPages({
       remoteUrl: 'https://${GH_TOKEN}@github.com/nmorel/garage',
@@ -23,7 +23,7 @@ gulp.task('build', ['webpack'], () => {
 
 gulp.task('webpack', (callback) => {
   const options = require('./webpack')({
-    publicPath: '/garage/',
+    publicPath: '/',
   });
   options.plugins.push(new webpack.optimize.UglifyJsPlugin());
 
@@ -38,4 +38,9 @@ gulp.task('webpack', (callback) => {
     }));
     callback();
   });
+});
+
+gulp.task('cname', () => {
+  return gulp.src('./CNAME')
+  .pipe(gulp.dest('./dist/'));
 });
