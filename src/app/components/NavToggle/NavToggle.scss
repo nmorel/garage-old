@@ -1,0 +1,28 @@
+@import './variables';
+
+.navToggle {
+  position: absolute;
+  background: none;
+  margin: $toggle-margin;
+  padding: 0;
+  border: 0;
+  width: $toggle-width;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media screen and (min-width: $xs-width) {
+    display: none;
+  }
+}
+
+.iconBar {
+  display: block;
+  width: $toggle-width;
+  height: 5px;
+  background: #fff;
+  border-radius: 1px;
+  margin-top: $toggle-margin;
+}

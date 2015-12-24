@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "stable"
+before_install:
+  - git config --global user.email "nmr.morel@gmail.com" && git config --global user.name "Nicolas Morel"
+script: npm run build
+env:
+  global:
+  - secure: of9UcMj4EuedtIo8D3dPtbbtJvdRO0Rc8szT6aDF6t8s16i3lLeEiQ0o7p7D/lL8bOLIajRjCrVQXON8K1wjYJlO2g/SEb/wtnnW0HUUbmww3Kq0L1x8AHZ9NBSWGjOg3cbbIqtctbNLkZULlIBxXyAkdWohIjTstfXlkdWw5e9QfCVWxqS8OoKE5b/jFOrgiIiHe9VGCI6Zpg+2gL9/nr0BHbaNNW7qOPbTcLoJ70SnY3l4wQeQJ9v4KLyMNlBB117vIjpsZlYTOLREft6bezxY/ahfY8iT9ed2rpv8piIJEsatHFmFARPA/lK2JYjfhXIBnB/hU4o2YF+pENO9N7SNzaQIfSaj6yAwJJn8H/WfXN/Lo/cSvJkiAzhvDZTL2xniEBUAAWAR6nJgmtgYaHN91fEKbkUF2XPFCY4rm1OjD3AJyU5u0o7wQAkKJciLYlYfPv/nRnFzYHAPX0K4ZfLEVu+WtZcr0xT7LJJxCLjb/v8442zSUSOLLoqQYbZdVnsXq+v6/ARyTcdU8F9SLtRPtSCesN4hyo/MLJmuZA/USgf6LBGqAu13NRrTxCzTECtPvsR2rzdNIZZTLV9z7RoOWGbt+GsnveTLoUj0oEDe/57VrQJCEuDlm6lzhETe6qm7y7em2ztk7CMcI8MpxtDWinxnbkUZaemE6rytH6c=

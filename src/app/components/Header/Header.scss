@@ -1,0 +1,51 @@
+@import '../../../styles/variables';
+@import '../NavToggle/variables';
+
+$text-padding: 0 ($toggle-width + ($toggle-margin * 2));
+$toggle-transition-delay: 500ms;
+
+.header {
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  position: relative;
+}
+
+.nav {
+  text-align: center;
+  overflow: hidden;
+  /* To avoid the toggle button to be on top of links */
+  padding: $text-padding;
+
+  &.opened {
+    transition: max-height $toggle-transition-delay ease-in;
+    max-height: 500px;
+  }
+
+  @media screen and (max-width: $xs-width) {
+    max-height: 0;
+    transition: max-height $toggle-transition-delay ease-out;
+  }
+}
+
+.navLinks {
+  padding: 0;
+  margin: 5px 0 0 0;
+
+  > li {
+    display: inline;
+
+    > a {
+      color: #fff;
+      text-transform: uppercase;
+      margin: 0 3px;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  margin: 26px 0;
+  /* To avoid the toggle button to be on top of title */
+  padding: $text-padding;
+}
