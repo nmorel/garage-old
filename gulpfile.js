@@ -17,13 +17,13 @@ gulp.task('clean', () => del(['./dist']));
 gulp.task('build', ['webpack'], () => {
   return gulp.src('./dist/**/*')
     .pipe(ghPages({
-      remoteUrl: 'https://${GH_TOKEN}@github.com/nmorel/test-react',
+      remoteUrl: 'https://${GH_TOKEN}@github.com/nmorel/garage',
     }));
 });
 
 gulp.task('webpack', (callback) => {
   const options = require('./webpack')({
-    publicPath: '/test-react/',
+    publicPath: '/garage/',
   });
   options.plugins.push(new webpack.optimize.UglifyJsPlugin());
 
