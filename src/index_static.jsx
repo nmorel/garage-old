@@ -31,6 +31,8 @@ class Page extends React.Component {
         <link rel="icon" type="image/png" href={require('./images/favicon-32x32.png')} sizes="32x32"/>
         <link rel="icon" type="image/png" href={require('./images/favicon-16x16.png')} sizes="16x16"/>
 
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css"/>
+
         <meta name="author" content="Nicolas Morel"/>
         <meta name="keywords" content="garage, Morel, réparation, dépannage, essence, mécanique"/>
         <meta name="description" content="Garage Morel Régis - Réparation, Dépannage, Essence, Véhicules d'occasions"/>

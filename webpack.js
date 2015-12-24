@@ -45,7 +45,7 @@ module.exports = config => {
     },
     plugins: [
       new ExtractTextPlugin(cssFilename),
-      new StaticSiteGeneratorPlugin('app', ['/', '/page1', '/page2', '/contact']),
+      new StaticSiteGeneratorPlugin('app', ['/', '/occasions', '/prestations', '/contact']),
     ],
     resolve: {
       modulesDirectories: ['.', './node_modules'],
