@@ -14,7 +14,7 @@ gulp.task('default', ['clean'], () => {
 
 gulp.task('clean', () => del(['./dist']));
 
-gulp.task('build', ['webpack', 'cname'], () => {
+gulp.task('build', ['webpack', 'static'], () => {
   return gulp.src('./dist/**/*')
     .pipe(ghPages({
       remoteUrl: 'https://${GH_TOKEN}@github.com/nmorel/garage',
@@ -40,7 +40,7 @@ gulp.task('webpack', (callback) => {
   });
 });
 
-gulp.task('cname', () => {
-  return gulp.src('./CNAME')
+gulp.task('static', () => {
+  return gulp.src(['./CNAME', './google*.html'])
   .pipe(gulp.dest('./dist/'));
 });

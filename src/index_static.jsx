@@ -68,7 +68,7 @@ module.exports = function render(locals, callback) {
   const history = createMemoryHistory();
   const location = history.createLocation(locals.path);
 
-  match({routes, location, basename: props.baseHref}, (error, redirectLocation, renderProps) => {
+  match({ routes, location, basename: props.baseHref }, (error, redirectLocation, renderProps) => {
     // Application element that will be overriden on client
     props.appHtml = ReactDOMServer.renderToString(<RoutingContext {...renderProps} />);
 

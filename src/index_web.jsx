@@ -14,6 +14,8 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
 import routes from './app';
+import ga from './app/services/ga';
 
 const history = useBasename(createHistory)();
+ga(history);
 ReactDOM.render(<Router history={history} routes={routes}/>, document.getElementById('app'));
