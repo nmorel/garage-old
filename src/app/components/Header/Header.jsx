@@ -27,19 +27,20 @@ class Header extends React.Component {
         <UnderConstruction />
         <div className={styles.navContainer}>
           <NavToggle onToggleNav={this._toggleNav}/>
+          <div className={styles.navBrand}>Garage Morel Régis</div>
           <nav id="header-nav" className={navBarClasses}>
             <ul className={styles.navLinks}>
               <li>
-                <Link to="/" activeClassName="active">Accueil</Link>
+                <Link to="/" activeClassName={styles.active}>Accueil</Link>
               </li>
               <li>
-                <Link to="/occasions" activeClassName="active">Véhicules d'occasions</Link>
+                <Link to="/occasions" activeClassName={styles.active}>Véhicules d'occasions</Link>
               </li>
               <li>
-                <Link to="/prestations" activeClassName="active">Prestations</Link>
+                <Link to="/prestations" activeClassName={styles.active}>Prestations</Link>
               </li>
               <li>
-                <Link to="/contact" activeClassName="active">Contact</Link>
+                <Link to="/contact" activeClassName={styles.active}>Contact</Link>
               </li>
             </ul>
           </nav>
