@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from '../../../components/Container';
 
 /**
  * Page listant les services proposés
@@ -6,7 +7,7 @@ import React from 'react';
 export default class extends React.Component {
   render() {
     return (
-      <div>
+      <Container>
         <div>Liste des services proposés</div>
         <ul>
           <li>Essence</li>
@@ -14,7 +15,7 @@ export default class extends React.Component {
           <li>Vente de véhicules d'occasions</li>
           <li>Etc...</li>
         </ul>
-      </div>
+      </Container>
     );
   }
 }

@@ -1,0 +1,36 @@
+@import '../../../../../styles/variables';
+
+.bannerContainer {
+  background: url('./banner_xs.jpg') no-repeat;
+  height: 250px;
+
+  @media (min-width: $sm-width) {
+    background: url('./banner_sm.jpg') no-repeat;
+  }
+
+  @media (min-width: $md-width) {
+    height: 350px;
+    background: url('./banner_md.jpg') no-repeat;
+  }
+
+  @media (min-width: $lg-width) {
+    background: url('./banner_lg.jpg') no-repeat center;
+  }
+
+  > div {
+    height: 100%;
+  }
+}
+
+.openingHoursContainer {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 15px;
+}
+
+.openingHoursTitle {
+  font-weight: bold;
+}
