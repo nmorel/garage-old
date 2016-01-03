@@ -1,12 +1,16 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+const data = require('./src/data');
 
 module.exports = config => {
   const publicPath = config && config.publicPath ? config.publicPath : '/';
   const filename = 'scripts/[name].[chunkhash].js';
   const cssFilename = 'styles/[name].[contenthash].css';
   const imageFilename = 'images/[name].[hash].[ext]';
+
+  const staticPaths = ['/', '/occasions', '/prestations', '/contact'];
+  data.cars.forEach(car => staticPaths.push('/occasions/' + car.id));
 
   return {
     entry: {
@@ -45,7 +49,7 @@ module.exports = config => {
     },
     plugins: [
       new ExtractTextPlugin(cssFilename),
-      new StaticSiteGeneratorPlugin('app', ['/', '/occasions', '/prestations', '/contact']),
+      new StaticSiteGeneratorPlugin('app', staticPaths),
     ],
     resolve: {
       modulesDirectories: ['.', './node_modules'],
