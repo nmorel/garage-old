@@ -20,6 +20,7 @@ export default class extends React.Component {
       <Container>
         <div>Toto</div>
         <div>{this.state.car.model}</div>
+        <img src={this.state.car.photos[0]} />
       </Container>
     );
   }

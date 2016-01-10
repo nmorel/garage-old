@@ -39,6 +39,11 @@ module.exports = config => {
           exclude: [/node_modules/],
           loader: ExtractTextPlugin.extract('css?modules!autoprefixer?browsers=last 2 versions!sass'),
         },
+        {
+          test: /\.json/,
+          exclude: [/node_modules/],
+          loader: 'json',
+        },
       ],
     },
     output: {
@@ -58,6 +63,7 @@ module.exports = config => {
       publicPath: publicPath,
       progress: true,
       colors: true,
+      contentBase: './src/',
     },
   };
 };

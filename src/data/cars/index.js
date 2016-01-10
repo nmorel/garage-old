@@ -1,5 +1,5 @@
 const cars = [
-  require('./1234')
+  require('./1234/data.json')
 ];
 
 module.exports = cars;
