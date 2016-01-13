@@ -1,5 +1,5 @@
 {
-  "id": "1234",
+  "id": 1,
   "year": 2012,
   "make": "Volkswagen",
   "model": "Golf",
@@ -7,6 +7,6 @@
   "transmission": "manual",
   "fuelType": "gasoline",
   "photos": [
-    "data/cars/1234/golf.jpg"
+    "data/cars/1/golf.jpg"
   ]
 }
