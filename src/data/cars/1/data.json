@@ -3,9 +3,15 @@
   "year": 2012,
   "make": "Volkswagen",
   "model": "Golf",
-  "mileage": "64500",
-  "transmission": "manual",
-  "fuelType": "gasoline",
+  "mileage": 64500,
+  "transmission": "Manuelle",
+  "fuelType": "Diesel",
+  "power": "50cv",
+  "options": [
+    "Vitres électriques",
+    "Jantes alu"
+  ],
+  "observations": "Légère bosse sur l'aile arrière droite",
   "photos": [
     "data/cars/1/golf.jpg"
   ]
