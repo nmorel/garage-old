@@ -21,7 +21,9 @@ gulp.task('default', ['clean'], () => {
 
 gulp.task('clean', () => del(['./dist']));
 
-gulp.task('build', ['webpack', 'static', 'staticData'], () => {
+gulp.task('build', ['webpack', 'static', 'staticData']);
+
+gulp.task('publish', ['build'], () => {
   return gulp.src('./dist/**/*')
     .pipe(ghPages({
       remoteUrl: 'https://${GH_TOKEN}@github.com/nmorel/garage',

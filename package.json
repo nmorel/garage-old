@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Partie front-office du site du garage",
   "scripts": {
-    "webpack": "rm -rf dist && webpack",
     "dev": "webpack-dev-server",
     "test": "jest",
     "test-watch": "jest --watch",
-    "local-build": "GH_TOKEN=nmorel gulp build",
-    "build": "gulp build"
+    "build": "gulp build",
+    "local-publish": "GH_TOKEN=nmorel gulp publish",
+    "publish": "gulp publish"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
