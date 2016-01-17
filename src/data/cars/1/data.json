@@ -13,6 +13,42 @@
   ],
   "observations": "Légère bosse sur l'aile arrière droite",
   "photos": [
-    "data/cars/1/golf.jpg"
-  ]
+    {
+      "id": "07d93a57-b037-4d83-84a4-f3a771826f6e",
+      "name": "003.JPG",
+      "small": "data/cars/1/07d93a57-b037-4d83-84a4-f3a771826f6e/07d93a57-b037-4d83-84a4-f3a771826f6e_small.jpg",
+      "medium": "data/cars/1/07d93a57-b037-4d83-84a4-f3a771826f6e/07d93a57-b037-4d83-84a4-f3a771826f6e_medium.jpg",
+      "large": "data/cars/1/07d93a57-b037-4d83-84a4-f3a771826f6e/07d93a57-b037-4d83-84a4-f3a771826f6e_large.jpg"
+    },
+    {
+      "id": "4a571dc6-9332-474f-9308-0e07ff12f4ee",
+      "name": "002.JPG",
+      "small": "data/cars/1/4a571dc6-9332-474f-9308-0e07ff12f4ee/4a571dc6-9332-474f-9308-0e07ff12f4ee_small.jpg",
+      "medium": "data/cars/1/4a571dc6-9332-474f-9308-0e07ff12f4ee/4a571dc6-9332-474f-9308-0e07ff12f4ee_medium.jpg",
+      "large": "data/cars/1/4a571dc6-9332-474f-9308-0e07ff12f4ee/4a571dc6-9332-474f-9308-0e07ff12f4ee_large.jpg"
+    },
+    {
+      "id": "1488b186-0d88-4ca5-95c3-3366c937ccf6",
+      "name": "004.JPG",
+      "small": "data/cars/1/1488b186-0d88-4ca5-95c3-3366c937ccf6/1488b186-0d88-4ca5-95c3-3366c937ccf6_small.jpg",
+      "medium": "data/cars/1/1488b186-0d88-4ca5-95c3-3366c937ccf6/1488b186-0d88-4ca5-95c3-3366c937ccf6_medium.jpg",
+      "large": "data/cars/1/1488b186-0d88-4ca5-95c3-3366c937ccf6/1488b186-0d88-4ca5-95c3-3366c937ccf6_large.jpg"
+    },
+    {
+      "id": "172ab07f-599a-4c8f-ab17-57b87dc903b6",
+      "name": "001.JPG",
+      "small": "data/cars/1/172ab07f-599a-4c8f-ab17-57b87dc903b6/172ab07f-599a-4c8f-ab17-57b87dc903b6_small.jpg",
+      "medium": "data/cars/1/172ab07f-599a-4c8f-ab17-57b87dc903b6/172ab07f-599a-4c8f-ab17-57b87dc903b6_medium.jpg",
+      "large": "data/cars/1/172ab07f-599a-4c8f-ab17-57b87dc903b6/172ab07f-599a-4c8f-ab17-57b87dc903b6_large.jpg"
+    },
+    {
+      "id": "b1be6f73-53f2-4bed-a22e-598d1145ea94",
+      "name": "005.JPG",
+      "small": "data/cars/1/b1be6f73-53f2-4bed-a22e-598d1145ea94/b1be6f73-53f2-4bed-a22e-598d1145ea94_small.jpg",
+      "medium": "data/cars/1/b1be6f73-53f2-4bed-a22e-598d1145ea94/b1be6f73-53f2-4bed-a22e-598d1145ea94_medium.jpg",
+      "large": "data/cars/1/b1be6f73-53f2-4bed-a22e-598d1145ea94/b1be6f73-53f2-4bed-a22e-598d1145ea94_large.jpg"
+    }
+  ],
+  "creationDate": "2016-01-17T09:30:10.148Z",
+  "modificationDate": "2016-01-17T17:39:22.023Z"
 }

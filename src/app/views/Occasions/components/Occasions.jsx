@@ -15,9 +15,13 @@ export default class extends React.Component {
 
   render() {
     const cars = this.state.cars.map(car => {
+      const link = car.photos && car.photos.length ? (
+        <img src={car.photos[0].small} alt={car.photos[0].name} />
+      ) : car.make + ' - ' + car.model;
+
       return (
         <div>
-          <Link to={'occasions/'+car.id}>{car.id}</Link>
+          <Link to={'occasions/'+car.id}>{link}</Link>
         </div>
       );
     });

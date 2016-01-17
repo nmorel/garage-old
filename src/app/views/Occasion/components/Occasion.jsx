@@ -11,16 +11,24 @@ export default class extends React.Component {
     const cars = require('data/cars');
 
     this.state = {
-      car: cars.find(car => car.id === props.params.uid)
+      car: cars.find(car => car.id.toString() === props.params.uid)
     };
   }
 
   render() {
+    const photos = this.state.car.photos && this.state.car.photos.length ? (
+      <div>
+        <img src={this.state.car.photos[0].small}/>
+        <img src={this.state.car.photos[0].medium}/>
+        <img src={this.state.car.photos[0].large}/>
+      </div>
+    ) : undefined;
+
     return (
       <Container>
         <div>Toto</div>
         <div>{this.state.car.model}</div>
-        <img src={this.state.car.photos[0]} />
+        {photos}
       </Container>
     );
   }
