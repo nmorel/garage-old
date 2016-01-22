@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './App.scss';
 import Header from '../Header';
 import Footer from '../Footer';
 
@@ -12,10 +13,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Header/>
-        {this.props.children}
-        <Footer/>
+      <div className={styles.wrapper}>
+        <div className={styles.header}>
+          <Header/>
+        </div>
+        <div className={styles.content}>
+          {this.props.children}
+          <div className={styles.clearBeforeFooter}></div>
+        </div>
+        <div className={styles.footer}>
+          <Footer/>
+        </div>
       </div>
     );
   }

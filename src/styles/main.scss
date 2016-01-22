@@ -1,5 +1,9 @@
 @import './variables';
 
+html, body, body > div {
+  height: 100%;
+}
+
 body {
   padding: 0;
   margin: 0;
