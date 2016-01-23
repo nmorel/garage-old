@@ -1,69 +1,60 @@
 @import '../../../styles/variables';
-@import '../NavToggle/variables';
+@import '../../../styles/mixins';
 
-$text-padding: 0 ($toggle-width + ($toggle-margin * 2));
-$toggle-transition-delay: 500ms;
+:global {
+  @import '../../../../node_modules/bootstrap/scss/nav';
+  @import '../../../../node_modules/bootstrap/scss/navbar';
+}
 
 $header-height: 50px;
 $underline-width: 3px;
 $line-height: $header-height - $underline-width;
 
 .header {
-  overflow: hidden;
   background: $black-color;
-  color: #fff;
-  position: relative;
 }
 
-.navContainer {
-  position: relative;
-  height: $header-height;
-  margin: auto;
-  max-width: $content-width;
-}
+:global {
 
-.navBrand {
-  float: left;
-  margin-right: 20px;
-  line-height: $line-height;
-  font-size: 20px;
-}
-
-.nav {
-  float: left;
-  overflow: hidden;
-  /* To avoid the toggle button to be on top of links */
-  padding: $text-padding;
-
-  &.opened {
-    transition: max-height $toggle-transition-delay ease-in;
-    max-height: 500px;
+  .navbar {
+    padding: 0;
+    color: #fff;
   }
 
-  @media screen and (max-width: $xs-width) {
-    max-height: 0;
-    transition: max-height $toggle-transition-delay ease-out;
-  }
-}
+  .navbar-brand {
+    padding: 0;
+    line-height: $line-height;
+    margin-right: 0;
 
-.navLinks {
-  padding: 0;
-  margin: 0;
-
-  > li {
-    display: inline-block;
     > a {
-      display: inline-block;
       color: #fff;
-      padding: 0 15px;
-      line-height: $line-height;
-      border-bottom: $underline-width solid transparent;
+      text-decoration: none;
+    }
 
-      &:hover,
-      &.active {
-        text-decoration: none;
-        background-color: #333;
-        border-color: $primary-color;
+    @include media-breakpoint-up(md) {
+      margin-right: 2rem;
+    }
+  }
+
+  .nav.navbar-nav {
+    > li.nav-item {
+      margin: 0;
+      > a {
+        color: #fff;
+        padding: 0 15px;
+        line-height: $line-height;
+        border-bottom: $underline-width solid transparent;
+
+        &:hover,
+        &.active {
+          color: #fff;
+          background-color: #333;
+          border-color: $primary-color;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        float: none;
       }
     }
   }

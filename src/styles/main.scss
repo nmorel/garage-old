@@ -1,26 +1,18 @@
 @import './variables';
+@import './mixins';
+
+:global {
+  @import '../../node_modules/bootstrap/scss/bootstrap-reboot';
+  @import '../../node_modules/bootstrap/scss/bootstrap-grid';
+  @import '../../node_modules/bootstrap/scss/utilities';
+  @import '../../node_modules/bootstrap/scss/utilities-responsive';
+  @import '../../node_modules/bootstrap/scss/animation';
+}
 
 html, body, body > div {
   height: 100%;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  font: normal 16px $font-stack;
-  line-height: 150%;
-}
-
-:global {
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-::selection {
-  background: $primary-color;
+  font-family: $font-stack;
 }

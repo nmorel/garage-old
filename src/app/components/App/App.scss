@@ -1,4 +1,5 @@
 @import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 .wrapper {
   position: relative;
@@ -12,7 +13,7 @@
 .content {
   padding-bottom: $footer-margin + $xs-footer-height;
 
-  @media screen and (min-width: $xs-width) {
+  @include media-breakpoint-up(sm) {
     padding-bottom: $footer-margin + $footer-height;
   }
 }
@@ -28,7 +29,7 @@
   bottom: 0;
   left: 0;
 
-  @media screen and (min-width: $xs-width) {
+  @include media-breakpoint-up(sm) {
     height: $footer-margin + $footer-height;
   }
 }

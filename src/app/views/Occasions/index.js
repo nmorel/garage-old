@@ -1,4 +1,4 @@
-import Occasions from './components/Occasions.jsx';
+import Occasions from './components/Occasions';
 
 export default {
   path: '/occasions',

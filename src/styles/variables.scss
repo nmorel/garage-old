@@ -1,15 +1,10 @@
+@import '../../node_modules/bootstrap/scss/variables';
+
 $font-stack: 'Roboto', sans-serif;
 $primary-color: #a6021f;
 $yellow-color: #fdeb02;
 $black-color: #212203;
 
-$xs-width: 640px;
-$sm-width: 768px;
-$md-width: 992px;
-$lg-width: 1200px;
-
-$content-width: 1170px;
-
 $footer-margin: 20px;
-$footer-height: 36px;
-$xs-footer-height: 60px;
+$footer-height: 30px;
+$xs-footer-height: 48px;

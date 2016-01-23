@@ -1,25 +1,30 @@
 @import '../../../../../styles/variables';
+@import '../../../../../styles/mixins';
 
 .bannerContainer {
   background: url('./banner_xs.jpg') no-repeat;
   height: 250px;
 
-  @media (min-width: $sm-width) {
+  @include media-breakpoint-up(sm) {
     background: url('./banner_sm.jpg') no-repeat;
   }
 
-  @media (min-width: $md-width) {
+  @include media-breakpoint-up(lg) {
     height: 350px;
     background: url('./banner_md.jpg') no-repeat;
   }
 
-  @media (min-width: $lg-width) {
-    background: url('./banner_lg.jpg') no-repeat center;
+  @include media-breakpoint-up(xl) {
+    background: url('./banner_lg.jpg') no-repeat;
   }
 
   > div {
     height: 100%;
   }
+}
+
+.bannerInner {
+  position: relative;
 }
 
 .openingHoursContainer {

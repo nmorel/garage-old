@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from '../../../components/Container';
 
 /**
  * Page affichant le détail d'une occasion
@@ -25,11 +24,11 @@ export default class extends React.Component {
     ) : undefined;
 
     return (
-      <Container>
+      <div className="container">
         <div>Toto</div>
         <div>{this.state.car.model}</div>
         {photos}
-      </Container>
+      </div>
     );
   }
 }
