@@ -1,0 +1,24 @@
+@import '../../../../../styles/variables';
+@import '../../../../../styles/mixins';
+
+.title {
+  text-transform: uppercase;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+}
+
+.smallImage {
+  width: 25%;
+  height: auto;
+}
+
+.additionnalPhotos {
+  text-align: right;
+
+  > a {
+    cursor: pointer;
+  }
+}
