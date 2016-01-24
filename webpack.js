@@ -30,7 +30,7 @@ module.exports = config => {
           },
         },
         {
-          test: /\.(png|jpg|ico|svg)$/,
+          test: /\.(png|jpg|ico|svg|eot|ttf|woff)$/,
           exclude: [/node_modules/],
           loader: 'file?name=' + imageFilename,
         },
