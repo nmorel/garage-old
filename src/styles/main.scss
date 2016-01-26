@@ -8,6 +8,11 @@
   @import '../../node_modules/bootstrap/scss/utilities';
   @import '../../node_modules/bootstrap/scss/utilities-responsive';
   @import '../../node_modules/bootstrap/scss/animation';
+  @import '../../node_modules/bootstrap/scss/modal';
+
+  .modal-backdrop.in {
+    opacity: 0.9;
+  }
 }
 
 html, body, body > div {

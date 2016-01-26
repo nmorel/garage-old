@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Occasion.scss';
 import formatter from 'app/services/formatter';
+import Carousel from 'nuka-carousel';
+import Modal from 'react-bootstrap/lib/Modal';
 
 /**
  * Page affichant le détail d'une occasion
@@ -12,9 +14,22 @@ export default class extends React.Component {
     const cars = require('data/cars');
 
     this.state = {
-      car: cars.find(car => car.id.toString() === props.params.uid)
+      car: cars.find(car => car.id.toString() === props.params.uid),
+      showModal: false
     };
   }
+
+  openCarousel = () => {
+    this.setState({
+      showModal: true
+    });
+  };
+
+  closeCarousel = () => {
+    this.setState({
+      showModal: false
+    });
+  };
 
   render() {
     const car = this.state.car;
@@ -29,15 +44,15 @@ export default class extends React.Component {
       observations = <li>Observations: {car.observations}</li>
     }
 
-    var photos;
+    var photos, photosCarousel;
     if (car.photos && car.photos.length) {
       photos = car.photos.slice(0, 5).map((photo, index) => {
         if (index === 0) {
           return <img className={styles.mainImage} src={photo.large}
-                      alt={photo.name}/>;
+                      alt={photo.name} onClick={this.openCarousel}/>;
         } else {
           return <img className={styles.smallImage} src={photo.small}
-                      alt={photo.name}/>;
+                      alt={photo.name} onClick={this.openCarousel}/>;
         }
       });
       if (car.photos.length > 5) {
@@ -45,10 +60,18 @@ export default class extends React.Component {
         const message = nbAddPhotos === 1 ? ' photo supplémentaire' : ' photos supplémentaires';
         photos.push((
           <div className={styles.additionnalPhotos}>
-            <a>{nbAddPhotos + message}</a>
+            <a onClick={this.openCarousel}>{nbAddPhotos + message}</a>
           </div>
         ));
       }
+
+      photosCarousel = car.photos.map(photo => {
+        return (
+          <div className={styles.carouselImgContainer}>
+            <img src={photo.verylarge}/>
+          </div>
+        )
+      });
     }
 
     return (
@@ -73,6 +96,11 @@ export default class extends React.Component {
             {photos}
           </div>
         </div>
+        <Modal show={this.state.showModal} onHide={this.closeCarousel} dialogClassName={styles.modalCarousel}>
+          <Carousel>
+            {photosCarousel}
+          </Carousel>
+        </Modal>
       </div>
     );
   }

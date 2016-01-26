@@ -8,11 +8,13 @@
 .mainImage {
   width: 100%;
   height: auto;
+  cursor: pointer;
 }
 
 .smallImage {
   width: 25%;
   height: auto;
+  cursor: pointer;
 }
 
 .additionnalPhotos {
@@ -20,5 +22,30 @@
 
   > a {
     cursor: pointer;
+  }
+}
+
+.modalCarousel {
+  width: 100%;
+  height: 100%;
+  max-width: 780px;
+  max-height: 780px;
+  padding: 0 30px;
+}
+
+.carouselImgContainer {
+  display: table-cell;
+  width: 780px;
+  height: 780px;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  vertical-align: middle;
+
+  > img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
   }
 }
