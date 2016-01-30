@@ -3,7 +3,7 @@
   "year": 2012,
   "make": "Volkswagen",
   "model": "Golf",
-  "mileage": 64500,
+  "mileage": 226500,
   "transmission": "Manuelle",
   "fuelType": "Diesel",
   "power": "50cv",
@@ -11,7 +11,7 @@
     "Vitres électriques",
     "Jantes alu"
   ],
-  "observations": "Légère bosse sur l'aile arrière droite",
+  "observations": "",
   "photos": [
     {
       "id": "a9604dda-9b6e-4f89-969a-08fad5f9d057",
@@ -55,6 +55,6 @@
     }
   ],
   "creationDate": "2016-01-17T09:30:10.148Z",
-  "modificationDate": "2016-01-24T18:02:23.626Z",
-  "price": 5600
+  "modificationDate": "2016-01-26T06:56:34.027Z",
+  "price": 4500
 }
