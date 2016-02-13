@@ -39,3 +39,35 @@
 .openingHoursTitle {
   font-weight: bold;
 }
+
+.title {
+  margin-top: 10px;
+}
+
+.car {
+  float: left;
+}
+
+.primaryCar {
+  composes: car;
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: percentage(1 / 3 * 2);
+  }
+}
+
+.secondaryCar {
+  composes: car;
+  width: 50%;
+
+  @include media-breakpoint-up(lg) {
+    width: percentage(1 / 3);
+  }
+}
+
+.seeAll {
+  padding-top: 5px;
+  clear: both;
+  text-align: right;
+}

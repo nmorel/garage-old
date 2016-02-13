@@ -1,10 +1,23 @@
 import React from 'react';
 import styles from './Home.scss';
+import orderBy from 'lodash/collection/sortByOrder';
+import filterBy from 'lodash/collection/filter';
+import { Link } from 'react-router';
 
 /**
  * Page d'accueil
  */
 export default class extends React.Component {
+  constructor(props) {
+    super(props);
+    var cars = filterBy(orderBy(require('data/cars'), ['modificationDate'], ['desc']), function (car) {
+      return car.photos && car.photos.length;
+    });
+    this.state = {
+      cars: cars
+    };
+  }
+
   render() {
     return (
       <div>
@@ -18,13 +31,28 @@ export default class extends React.Component {
           </div>
         </div>
         <div className="container">
-          <div style={{ background: 'lightblue', height: 400, float: 'left', width: '70%' }}>
-            <div style={{ background: 'yellow', height: 400, float: 'left', width: '60%' }}></div>
-            <div style={{ background: 'blue', height: 200, float: 'left', width: '40%' }}></div>
-            <div style={{ background: 'red', height: 200, float: 'left', width: '40%' }}></div>
-          </div>
-          <div style={{ background: 'lightgreen', height: 400, float: 'left', width: '30%' }}>
-            Emplacement pour les coordonnées ou description du site
+          <div className="row">
+            <div className="col-md-7 col-lg-9">
+              <h3 className={styles.title}>
+                <Link to={'occasions'}>Nos derniers véhicules</Link>
+              </h3>
+              <img className={styles.primaryCar} src={this.state.cars[0].photos[0].large}/>
+              <img className={styles.secondaryCar} src={this.state.cars[1].photos[0].large}/>
+              <img className={styles.secondaryCar} src={this.state.cars[2].photos[0].large}/>
+              <div className={styles.seeAll}>
+                <Link to={'occasions'}>Voir tous les véhicules</Link>
+              </div>
+            </div>
+            <div className="col-md-5 col-lg-3">
+              <h3 className={styles.title}>Promo du moment</h3>
+              <div>-50% sur les plaquettes de frein</div>
+              <h3 className={styles.title}>Contact</h3>
+              <div>"Le V"</div>
+              <div>50220 PONTAUBAULT</div>
+              <div>Tél. : 02 33 60 47 50</div>
+              <div>Fax : 02 33 60 28 84</div>
+              <div>Mail : garage.morel50@orange.fr</div>
+            </div>
           </div>
         </div>
       </div>
