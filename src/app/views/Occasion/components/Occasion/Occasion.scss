@@ -5,6 +5,47 @@
   text-transform: uppercase;
 }
 
+.propertyContainer {
+  margin-bottom: 5px;
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 5px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+  }
+}
+
+.propertyTitle {
+  font-weight: bold;
+  padding-right: 0;
+
+  &::after {
+    content: ' :'
+  }
+
+  @include media-breakpoint-up(sm) {
+    text-align: right;
+  }
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+  }
+
+  @include media-breakpoint-up(lg) {
+    text-align: right;
+  }
+}
+
+.propertyValue {
+  white-space: pre-line;
+}
+
 .mainImage {
   width: 100%;
   height: auto;

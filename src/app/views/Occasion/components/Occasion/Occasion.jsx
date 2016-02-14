@@ -36,12 +36,22 @@ export default class extends React.Component {
 
     var options;
     if (car.options && car.options.length) {
-      options = <li>Options: {car.options.join(', ')}</li>
+      options = (
+        <div className={'row ' + styles.propertyContainer}>
+          <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Options</div>
+          <div className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{car.options.join(', ')}</div>
+        </div>
+      );
     }
 
     var observations;
     if (car.observations && car.observations.length) {
-      observations = <li>Observations: {car.observations}</li>
+      observations = (
+        <div className={'row ' + styles.propertyContainer}>
+          <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Observations</div>
+          <div className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{car.observations}</div>
+        </div>
+      );
     }
 
     var photos, photosCarousel;
@@ -78,21 +88,45 @@ export default class extends React.Component {
       <div className="container">
         <h2 className={styles.title}>{car.make + ' ' + car.model}</h2>
         <div className="row">
-          <div className="col-md-6">
-            <ul>
-              <li>Marque: {car.make}</li>
-              <li>Modèle: {car.model}</li>
-              <li>Année: {car.year}</li>
-              <li>Kilométrage: {formatter.formatMileage(car.mileage)}</li>
-              <li>Prix: {formatter.formatPrice(car.price)}</li>
-              <li>Boite de vitesses: {car.transmission}</li>
-              <li>Carburant: {car.fuelType}</li>
-              <li>Puissance: {car.power}</li>
-              {options}
-              {observations}
-            </ul>
+          <div className="col-md-4 col-lg-6">
+            <div className={'row ' + styles.propertyContainer}>
+              <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Marque</div>
+              <div className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{car.make}</div>
+            </div>
+            <div className={'row ' + styles.propertyContainer}>
+              <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Modèle</div>
+              <div className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{car.model}</div>
+            </div>
+            <div className={'row ' + styles.propertyContainer}>
+              <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Année</div>
+              <div className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{car.year}</div>
+            </div>
+            <div className={'row ' + styles.propertyContainer}>
+              <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Kilométrage</div>
+              <div
+                className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{formatter.formatMileage(car.mileage)}</div>
+            </div>
+            <div className={'row ' + styles.propertyContainer}>
+              <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Prix</div>
+              <div
+                className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{formatter.formatPrice(car.price)}</div>
+            </div>
+            <div className={'row ' + styles.propertyContainer}>
+              <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Boite de vitesses</div>
+              <div className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{car.transmission}</div>
+            </div>
+            <div className={'row ' + styles.propertyContainer}>
+              <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Carburant</div>
+              <div className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{car.fuelType}</div>
+            </div>
+            <div className={'row ' + styles.propertyContainer}>
+              <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Puissance</div>
+              <div className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{car.power}</div>
+            </div>
+            {options}
+            {observations}
           </div>
-          <div className="col-md-6">
+          <div className="col-md-8 col-lg-6">
             {photos}
           </div>
         </div>
