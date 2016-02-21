@@ -5,7 +5,8 @@
   "model": "407",
   "year": 2008,
   "mileage": 113500,
-  "power": "6",
+  "powerFiscal": 6,
+  "powerReal": 0,
   "price": 4500,
   "options": [
     "CLIM AUTO",

@@ -34,6 +34,28 @@ export default class extends React.Component {
   render() {
     const car = this.state.car;
 
+    var realPower;
+    if (car.powerReal && car.powerReal > 0) {
+      realPower = (
+        <div className={'row ' + styles.propertyContainer}>
+          <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Puissance réelle</div>
+          <div
+            className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{formatter.formatRealPower(car.powerReal)}</div>
+        </div>
+      );
+    }
+
+    var fiscalPower;
+    if (car.powerFiscal && car.powerFiscal > 0) {
+      fiscalPower = (
+        <div className={'row ' + styles.propertyContainer}>
+          <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Puissance fiscale</div>
+          <div
+            className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{formatter.formatFiscalPower(car.powerFiscal)}</div>
+        </div>
+      );
+    }
+
     var options;
     if (car.options && car.options.length) {
       options = (
@@ -119,10 +141,8 @@ export default class extends React.Component {
               <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Carburant</div>
               <div className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{car.fuelType}</div>
             </div>
-            <div className={'row ' + styles.propertyContainer}>
-              <div className={'col-sm-4 col-md-12 col-lg-4 ' + styles.propertyTitle}>Puissance</div>
-              <div className={'col-sm-8 col-md-12 col-lg-8 ' + styles.propertyValue}>{car.power}</div>
-            </div>
+            {realPower}
+            {fiscalPower}
             {options}
             {observations}
           </div>

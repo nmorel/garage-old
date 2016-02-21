@@ -6,7 +6,8 @@
   "mileage": 226500,
   "transmission": "Manuelle",
   "fuelType": "Diesel",
-  "power": "50cv",
+  "powerFiscal": 50,
+  "powerReal": 20,
   "options": [
     "Vitres électriques",
     "Jantes alu"

@@ -21,7 +21,17 @@ function formatPrice(number) {
   return formatNumber(number) + ' €';
 }
 
+function formatFiscalPower(number) {
+  return formatNumber(number) + ' cv';
+}
+
+function formatRealPower(number) {
+  return formatNumber(number) + ' ch';
+}
+
 module.exports = {
   formatMileage: formatMileage,
-  formatPrice: formatPrice
+  formatPrice: formatPrice,
+  formatFiscalPower: formatFiscalPower,
+  formatRealPower: formatRealPower
 };

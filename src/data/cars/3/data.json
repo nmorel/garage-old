@@ -1,7 +1,8 @@
 {
   "transmission": "Manuelle",
   "fuelType": "Diesel",
-  "power": "8",
+  "powerFiscal": 8,
+  "powerReal": 0,
   "price": 9121,
   "options": [
     "galerie",

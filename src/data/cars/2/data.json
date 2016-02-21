@@ -5,7 +5,8 @@
   "model": "CLIO IV DCI 90CH",
   "year": 2012,
   "mileage": 100300,
-  "power": "4",
+  "powerFiscal": 4,
+  "powerReal": 90,
   "price": 9490,
   "options": [
     "GPS  BLUETHOOT CLIM JALU  STOP AND SART"
