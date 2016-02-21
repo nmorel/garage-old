@@ -25,7 +25,7 @@ export default class extends React.Component {
           <div className={'container ' + styles.bannerInner}>
             <div className={styles.openingHoursContainer}>
               <div className={styles.openingHoursTitle}>Nos horaires</div>
-              <div>Lundi au vendredi: 8h-12h30 / 13h30-19h</div>
+              <div>Lundi au vendredi: 8h-12h30 / 14h-19h</div>
               <div>Samedi: 8h-12h30</div>
             </div>
           </div>
@@ -44,6 +44,11 @@ export default class extends React.Component {
               </div>
             </div>
             <div className="col-md-5 col-lg-3">
+              <div className={styles.precisiumLogoContainer}>
+                <a href="http://garagemorelregis.precisium.fr/" target="_blank">
+                  <img src={require('images/logo.png')} />
+                </a>
+              </div>
               <h3 className={styles.title}>Promo du moment</h3>
               <div>-50% sur les plaquettes de frein</div>
               <h3 className={styles.title}>Contact</h3>
