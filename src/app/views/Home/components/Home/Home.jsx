@@ -3,6 +3,7 @@ import styles from './Home.scss';
 import orderBy from 'lodash/collection/sortByOrder';
 import filterBy from 'lodash/collection/filter';
 import { Link } from 'react-router';
+import Car from '../Car';
 
 /**
  * Page d'accueil
@@ -19,6 +20,10 @@ export default class extends React.Component {
   }
 
   render() {
+    var cars = this.state.cars.slice(0, 3).map((car, index) => {
+      return <Car key={car.id} car={car} primary={index === 0}/>;
+    });
+
     return (
       <div>
         <div className={styles.bannerContainer}>
@@ -36,9 +41,7 @@ export default class extends React.Component {
               <h3 className={styles.title}>
                 <Link to={'occasions'}>Nos derniers véhicules</Link>
               </h3>
-              <img className={styles.primaryCar} src={this.state.cars[0].photos[0].large}/>
-              <img className={styles.secondaryCar} src={this.state.cars[1].photos[0].large}/>
-              <img className={styles.secondaryCar} src={this.state.cars[2].photos[0].large}/>
+              {cars}
               <div className={styles.seeAll}>
                 <Link to={'occasions'}>Voir tous les véhicules</Link>
               </div>
@@ -46,7 +49,7 @@ export default class extends React.Component {
             <div className="col-md-5 col-lg-3">
               <div className={styles.precisiumLogoContainer}>
                 <a href="http://garagemorelregis.precisium.fr/" target="_blank">
-                  <img src={require('images/logo.png')} />
+                  <img src={require('images/logo.png')}/>
                 </a>
               </div>
               <h3 className={styles.title}>Promo du moment</h3>
