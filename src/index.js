@@ -1,3 +1,5 @@
+require('babel-polyfill');
+
 if (typeof document === 'undefined') {
   module.exports = require('./index_static.jsx');
 } else {
