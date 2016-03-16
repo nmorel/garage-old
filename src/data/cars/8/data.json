@@ -1,0 +1,22 @@
+{
+  "transmission": "Manuelle",
+  "fuelType": "Diesel",
+  "make": "CITROEN",
+  "model": "c4",
+  "year": 2011,
+  "mileage": 102500,
+  "powerReal": 90,
+  "powerFiscal": 5,
+  "price": 9490,
+  "options": [
+    "gps",
+    "clim",
+    "radar ar recul",
+    "regulateur vitesse",
+    "bluetooth"
+  ],
+  "observations": "1.6 hdi 92 ch\nfintion business\nsuivi entretien\ngarantie 6 mois",
+  "id": 8,
+  "creationDate": "2016-03-16T13:00:30.602Z",
+  "modificationDate": "2016-03-16T13:00:30.602Z"
+}
