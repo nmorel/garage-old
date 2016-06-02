@@ -1,0 +1,23 @@
+{
+  "transmission": "Manuelle",
+  "fuelType": "Diesel",
+  "make": "VOLKSWAGEN",
+  "model": "GOLF VI TDI 140",
+  "year": 2012,
+  "mileage": 105800,
+  "powerReal": 140,
+  "powerFiscal": 7,
+  "price": 12990,
+  "options": [
+    "RADAR AR AV",
+    "CLIM AUTO",
+    "GPS",
+    "BLUETHOOT",
+    "FIXATION ISOFIX",
+    "REGULATEUR"
+  ],
+  "observations": "Finition: BLUEMOTION CONFORTLINE BUSINESS\n\nVEHICULE REVISER GARANTIE 6 MOIS\nSUIVI ENTRETIEN",
+  "id": 11,
+  "creationDate": "2016-06-02T11:32:17.627Z",
+  "modificationDate": "2016-06-02T11:32:17.627Z"
+}
