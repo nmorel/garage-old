@@ -1,0 +1,21 @@
+{
+  "transmission": "Manuelle",
+  "fuelType": "Diesel",
+  "make": "PEUGEOT",
+  "model": "EXPERT 2L HDI125",
+  "year": 2012,
+  "mileage": 120800,
+  "powerReal": 125,
+  "powerFiscal": 7,
+  "price": 10920,
+  "options": [
+    "PACK",
+    "RADIO CD",
+    "CLIM MANUEL",
+    "REGULATEUR"
+  ],
+  "observations": "ATTELAGE \nPRIX :9100 HT / 10920 TTC\n\nVEHICULE REVISER GARANTIE 3 MOIS\nSUIVI ENTRETIEN",
+  "id": 10,
+  "creationDate": "2016-06-02T11:28:23.699Z",
+  "modificationDate": "2016-06-02T11:28:23.699Z"
+}
